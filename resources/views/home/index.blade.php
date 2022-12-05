@@ -40,7 +40,6 @@
 
                             <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
 
-                            {{-- <button class="nav-link" id="nav-faq-tab" data-bs-toggle="tab" data-bs-target="#nav-faq" type="button" role="tab" aria-controls="nav-faq" aria-selected="false">FAQs</button> --}}
                         </div>
                     </nav>
                 </div>
@@ -67,9 +66,6 @@
                                         devant être créée - et généralement, toute opérations financières, commerciales, industrielles, mobilières et immobilière, se rapportant
                                         directement ou indirectement a l'objet social ou pouvant en faciliter l'extension ou le développement. Avec une équipe de spécialistes de 5 cinq personnes.</p>
 
-                                    {{-- <p> <a rel="nofollow" href="https://www.tooplate.com/" target="_blank"></a></p> --}}
-                                    
-                                    {{-- <p>Image credits go to <a rel="nofollow" href="https://freepik.com/" target="_blank">FreePik</a> and <a rel="nofollow" href="https://unsplash.com/" target="_blank">Unsplash</a> for images used in this template. We really appreciate these stock image websites for providing free photos to everyone.</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -82,7 +78,7 @@
                                     <p>Notre priorité est votre bonheur en travaillant avec nous. Nous vous garantissons la meilleure qualité de service de notre part. N'hésitez pas à nous parler par e-mail.</p>
 
                                     <ul class="social-icon mt-lg-5 mt-3">
-                                        <li class="me-3"><strong>Where to find?</strong></li>
+                                        <li class="me-3"><strong>Où nous trouver?</strong></li>
 
                                         <li><a href="https://twitter.com/search?q=tooplate" class="social-icon-link bi-twitter"></a></li>
 
@@ -104,59 +100,6 @@
                                     <img src="images/php-programming-html-coding-cyberspace-concept.jpg" class="img-fluid" alt="">
                                 </div>
 
-                                {{-- <div class="col-lg-5 col-12 m-auto">
-                                    <h3 class="mb-3">Frequenlty Asked Questions</h3>
-
-                                    <div class="accordion" id="accordionGeneral">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralOne" aria-expanded="true" aria-controls="accordionGeneralOne">
-                                                What is Tween Agency?
-                                                </button>
-                                            </h2>
-
-                                            <div id="accordionGeneralOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionGeneral">
-
-                                                <div class="accordion-body">
-                                                    <p class="large-paragraph"><strong>Tween Agency</strong> is free HTML template powered by Bootstrap 5 CSS framework. This means you can use all standard CSS classes provided by Bootstrap version 5 to customize your CSS layout.</p>
-
-                                                    <p class="large-paragraph">You are allowed to use it for your clients. You are not allowed to redistribute this template ZIP file on any other template website. Please <a href="https://www.tooplate.com/contact" target="_blank"><strong>contact Tooplate</strong></a> for more info.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralTwo" aria-expanded="false" aria-controls="accordionGeneralTwo">
-                                                What are available services?
-                                                </button>
-                                            </h2>
-
-                                            <div id="accordionGeneralTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionGeneral">
-
-                                                <div class="accordion-body">
-                                                    <p class="large-paragraph">We provide full digital marketing services for all various aspects of your company's web presence and social medias. You have 100% peace of mind for your company by working with us.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionGeneralThree" aria-expanded="false" aria-controls="accordionGeneralThree">
-                                                How many successful projects?
-                                                </button>
-                                            </h2>
-
-                                            <div id="accordionGeneralThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionGeneral">
-
-                                                <div class="accordion-body">
-                                                    <p class="large-paragraph">We have over 280+ successful projects for different companies. There are great experiences of working together with different clients all over the world.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div> --}}
-                                {{-- </div> --}}
                             </div>
                         </div>
                     </div>
@@ -171,7 +114,7 @@
             <div class="row">
 
                 <h2 class="mb-5 text-center">Nos Services</h2>
-
+                    @foreach($services as $service)
                     <div class="col-lg-4 col-12 d-flex bg-primary p-0">
                         <img src="images/services/undraw_Online_page_re_lhgx.svg" class="img-fluid services-image" alt="">
                     </div>
@@ -179,111 +122,19 @@
                     <div class="col-lg-4 col-12 p-0">
                         <div class="services-info custom-icon-left paddingText">
                         
-                            <h4 class="">Ressources Humaines</h4>
+                            <h4 class="">{{$service->name}}</h4>
 
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
+                            <p class="mb-4">{{$service->description}}[10]</p>
 
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
+                            <a class="custom-btn custom-bg-dark btn" href="{{route('service.detail',['id'=>$service->id])}}">Voir plus</a>
                         </div>
                     </div>
-
+                        @endforeach
                     <div class="col-lg-4 col-12 d-flex bg-warning p-0">
                         <img src="images/services/undraw_online_transactions_02ka.svg" class="img-fluid services-image" alt="">
                     </div>
 
-                    <div class="col-lg-4 col-12 p-0 order-lg-0 order-sm-5">
-                  
-                        <div class="services-info custom-icon-right paddingText order-lg-0 order-sm-2">
-                        
-                            <h4 class="">Comptabilités</h4>
-
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
-
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 d-flex bg-success p-0 order-lg-0 order-sm-4">
-                        <img src="images/services/undraw_content_team_3epn.svg" class="img-fluid services-image" alt="">
-                    </div>
-
-                    <div class="col-lg-4 col-12 p-0">
-
-                        <div class="services-info custom-icon-top paddingText">
-                    
-                            <h4 class="">Services Informatiques</h4>
-
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
-
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12 d-flex bg-primary p-0">
-                        <img src="images/services/undraw_Online_page_re_lhgx.svg" class="img-fluid services-image" alt="">
-                    </div>
-
-                    <div class="col-lg-4 col-12 p-0">
-                        <div class="services-info custom-icon-left paddingText">
-                        
-                            <h4 class="">Gestions Logistiques</h4>
-
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
-
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 d-flex bg-warning p-0">
-                        <img src="images/services/undraw_online_transactions_02ka.svg" class="img-fluid services-image" alt="">
-                    </div>
-
-                    <div class="col-lg-4 col-12 p-0 order-lg-0 order-sm-5">
-                  
-                        <div class="services-info custom-icon-right paddingText order-lg-0 order-sm-2">
-                        
-                            <h4 class="">Services BTP</h4>
-
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
-
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-12 d-flex bg-success p-0 order-lg-0 order-sm-4">
-                        <img src="images/services/undraw_content_team_3epn.svg" class="img-fluid services-image" alt="">
-                        
-                    </div>
-
-                    <div class="col-lg-4 col-12 p-0">
-
-                        <div class="services-info custom-icon-top paddingText">
-                    
-                            <h4 class="">Marketing et Vente</h4>
-
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
-
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-12 d-flex bg-primary p-0">
-                        <img src="images/services/undraw_Online_page_re_lhgx.svg" class="img-fluid services-image" alt="">
-                    </div>
-
-                    <div class="col-lg-4 col-12 p-0">
-                        <div class="services-info custom-icon-left paddingText">
-                        
-                            <h4 class="">Livraison  des colis et Express</h4>
-
-                            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing industry</p>
-
-                            <a class="custom-btn custom-bg-dark btn" href="#">Learn More</a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-4 col-12 d-flex bg-warning p-0">
-                        <img src="images/services/undraw_online_transactions_02ka.svg" class="img-fluid services-image" alt="">
-                    </div>
+                 
 
                     
                     

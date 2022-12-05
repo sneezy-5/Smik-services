@@ -5,7 +5,7 @@
             <div class="col-lg-5 col-12 me-auto mb-4">
                 <h5 class="text-white mb-3">Newsletter</h5>
 
-                <form class="custom-form subscribe-form mt-4" action ="{{route('store')}}" method = "POST" role="form">
+                <form class="custom-form subscribe-form mt-4" action ="{{route('suscriber')}}" method = "POST" role="form">
                     @csrf
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-7">                                    
@@ -45,7 +45,7 @@
                 <h5 class="text-white mb-3">Localisation</h5>
 
                 <p class="text-white mb-1">ABIDJAN II PLATEAUX PETRO IVOIRE ANGRE CITE LES MANGUIERS LGT 250, Côte d'Ivoire</p>
-                <p class="text-white mb-1">Tel : (00225) </p>
+                <p class="text-white mb-1">Tel : (00225)  </p>
 
                 <p><a href="mailto:email@company.com" class="footer-link">email@company.com</a><p>
             </div>

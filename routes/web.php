@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\admincontroller;
 use App\Http\Controllers\contactcontroller;
 use App\Http\Controllers\newslettercontroller;
+use App\Http\Controllers\Admin\ServicesController;
+use App\Http\Controllers\Admin\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,28 +19,27 @@ use App\Http\Controllers\newslettercontroller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/',[HomeController::class, 'index'])->name('homaPage');
+Route::post('/send_message',[HomeController::class, 'storeMessage'])->name('sendMessage');
+Route::post('/suscribe',[HomeController::class, 'storeEmail'])->name('suscriber');
+Route::get('/service_detail/{id}/show',[HomeController::class, 'show_service'])->name('service.detail');
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/',[contactcontroller::class, 'index']);
-Route::post('/index',[contactcontroller::class, 'store'])->name('store');
-// Route::post('/',[contactcontroller::class, 'contact'])->name('store');
-Route::get('/',[newslettercontroller::class, 'index']);
-Route::post('/index',[newslettercontroller::class, 'store'])->name('store');
-
-Route::get('/admin',[admincontroller::class, 'index']);
+Route::middleware(['auth'])->group(function(){
+        
+        Route::get('/admin/dashboard',[DashboardController::class, 'index']);
+        Route::get('/admin/contacts',[DashboardController::class, 'messages'])->name('admin.message');
+        Route::get('/admin/newsletters',[DashboardController::class, 'newsletterSucribers'])->name('admin.newsletter');
+        Route::resource('admin/services',ServicesController::class);
 
 
+   
+    });
+    
 
-Route::get('/home', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('home');
 
 require __DIR__.'/auth.php';
