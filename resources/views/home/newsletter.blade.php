@@ -45,9 +45,9 @@
                 <h5 class="text-white mb-3">Localisation</h5>
 
                 <p class="text-white mb-1">ABIDJAN II PLATEAUX PETRO IVOIRE ANGRE CITE LES MANGUIERS LGT 250, Côte d'Ivoire</p>
-                <p class="text-white mb-1">Tel : (00225)  </p>
+                <p class="text-white mb-1">Tel : (00225) 07 57 84 43 72  </p>
 
-                <p><a href="mailto:email@company.com" class="footer-link">email@company.com</a><p>
+                <p><a href="mailto:email@company.com" class="footer-link">smik-service@smik-services.com</a><p>
             </div>
 
             <div class="site-footer-bottom mt-5">

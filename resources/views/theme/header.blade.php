@@ -23,7 +23,7 @@
         <link href="{{asset('css/magnific-popup.css')}}" rel="stylesheet">
 
         <link href="{{asset('css/tooplate-tween-agency.css')}}" rel="stylesheet">
-
+        <link rel="icon" href="{{asset('/images/logo.jpeg')}}" type="image/icon type">
 <!--
 
 Tooplate 2128 Tween Agency
@@ -40,7 +40,7 @@ https://www.tooplate.com/view/2128-tween-agency
             <div class="container">
 
                 <a href="#" class="navbar-brand">
-                    <i class="bi-layers"></i> Smik-Services
+                    <img src="{{asset('/images/logo.jpeg')}}" alt="logo" width="80" height="80"></i> Smik-Services
                 </a>
 
         
