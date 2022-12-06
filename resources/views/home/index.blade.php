@@ -11,11 +11,7 @@
                     <div class="heroText">
                         <h1 class="text-white mb-lg-5 mb-4">Nous sommes prêts à servir pour votre entreprise</h1>
 
-                        {{-- <a href="https://www.youtube.com/watch?v=AYaHuZ4BB6Y" class="popup-youtube play-icon-wrap d-flex align-items-center">
-                            <i class="bi-play play-icon"></i>
-
-                            <small>1:49 Minutes</small>
-                        </a> --}}
+               
                     </div>
                 </div>
 
@@ -80,11 +76,12 @@
                                     <ul class="social-icon mt-lg-5 mt-3">
                                         <li class="me-3"><strong>Où nous trouver?</strong></li>
 
-                                        <li><a href="https://twitter.com/search?q=tooplate" class="social-icon-link bi-twitter"></a></li>
+                                        <li><a href="https://facebook.com/smikservices/" class="social-icon-link bi-facebook"></a></li>
+
+
+                                        <li><a href="https://www.instagram.com/smik_services.01/" class="social-icon-link bi-instagram"></a></li>
 
                                         <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
-
-                                        <li><a href="#" class="social-icon-link bi-envelope"></a></li>
                                     </ul>
                                 </div>
 
@@ -124,7 +121,7 @@
                         
                             <h4 class="">{{$service->name}}</h4>
 
-                            <p class="mb-4">{{$service->description}}[10]</p>
+                            <p class="mb-4">{{$service->description }} </p>
 
                             <a class="custom-btn custom-bg-dark btn" href="{{route('service.detail',['id'=>$service->id])}}">Voir plus</a>
                         </div>

@@ -54,20 +54,17 @@
                 <div class="row pt-4">
                     <div class="col-lg-6 col-12">
                         <p class="copyright-text tooplate-link">Copyright © 2022 Smik-Service Co., Ltd.
-                        {{-- <br>Design: <a rel="nofollow" href="https://www.tooplate.com/" target="_blank">Tooplate</a></p> --}}
                     </div>
 
                     <div class="col-lg-3 col-12 ms-auto">
                         <ul class="social-icon">
-                            <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+                            <li><a href="https://facebook.com/smikservices/" class="social-icon-link bi-facebook"></a></li>
 
-                            <li><a href="https://twitter.com/search?q=tooplate" class="social-icon-link bi-twitter"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                            <li><a href="https://www.instagram.com/smik_services.01/" class="social-icon-link bi-instagram"></a></li>
 
                             <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
 
-                            <li><a href="#" class="social-icon-link bi-youtube"></a></li>
                         </ul>
                     </div>
                 </div>
